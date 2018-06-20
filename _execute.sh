@@ -12,7 +12,10 @@ fi
 
 echo " Prepare additional environment"
 if [ -f $WORKSPACE/_prepare_env.sh ]; then
+    echo "    file _prepare_env.sh found"
 	$WORKSPACE/_prepare_env.sh
+else
+    echo "    file _prepare_env.sh NOT found"
 fi
 
 echo " Prepare locust file"

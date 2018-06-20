@@ -2,7 +2,6 @@
 
 mkdir -p $LOG_DIR
 
-
 for i in `cat $METRIC_META_FILE`; do
 	if [ "${i:0:1}" != "#" ]; then
 		metric_meta=(`echo $i | tr ";" " "`)

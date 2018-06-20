@@ -2,6 +2,14 @@
 
 mkdir -p $LOG_DIR
 
+echo "in file batch locust log to csv"
+
+if [ -f $METRIC_META_FILE ]; then
+    echo "    metric file found: $METRIC_META_FILE"
+    cat $METRIC_META_FILE
+else
+    echo "    metric file NOT found"
+fi
 
 for i in `cat $METRIC_META_FILE`; do
 	if [ "${i:0:1}" != "#" ]; then
